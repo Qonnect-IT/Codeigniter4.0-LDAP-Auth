@@ -21,8 +21,9 @@ class Ldap
     $userinfo = $this->__authenticate($username, $password);
 
     if(!$userinfo) {
+      return FALSE;
     } else {
-      var_dump($userinfo);
+      return $userinfo;
     }
   }
 
